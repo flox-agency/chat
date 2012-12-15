@@ -16,7 +16,7 @@
       <a id="online" href="#">Connecté</a>
     </div>
     <div id="content">
-      <p>Now online: Leave a question or comment and our agents will try to attend to you </p>
+      <p>Vous êtes connecté: posez une question, un agent rentrera en contact avec vous. </p>
     </div>
     <div id="message">
       <textarea rows="3" cols="45"> ici un post</textarea>
@@ -43,9 +43,10 @@
 
        var old = $("#content").html();
 
-       $("#content").html(old + '<p>' + message + '</p>');
+       $("#content").html(old + '<p>' + message + '</p>'); // ajout de message
+       $("#content").scrollTop($("#content")[0].scrollHeight); //Auto scroll down à chaque ajout de message.
 
-      $("textarea").html("");
+      $("textarea").html(""); //Nettoyage de la textarea
         //
       });
     });
