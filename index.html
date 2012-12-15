@@ -14,6 +14,7 @@
     <div id="title">
       <a id="dclive" href="#">DC Live Chat</a>
       <a id="online" href="#">Connecté</a>
+    <br clear="all">
     </div>
     <div id="content">
       <p>Vous êtes connecté: posez une question, un agent rentrera en contact avec vous. </p>
@@ -46,7 +47,7 @@
        $("#content").html(old + '<p>' + message + '</p>'); // ajout de message
        $("#content").scrollTop($("#content")[0].scrollHeight); //Auto scroll down à chaque ajout de message.
 
-      $("textarea").html(""); //Nettoyage de la textarea
+      $("textarea").val(''); //Nettoyage de la textarea
         //
       });
     });

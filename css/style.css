@@ -103,6 +103,11 @@ table {
 	height: 30px;
 }
 
+.options {
+	float: right;
+	font-weight: bold;
+}
+
 a {
 	color: #FFF;
    font-family: "Museo","Georgia","serif";
