@@ -11,17 +11,23 @@
     </head>
     <body>
         <div id="container" style="bottom: -451px;">
-            <div id="title"><a id="dclive" href="#">DC Live Chat</a><a id="online" href="#">On Line</a></div>
+            <div id="title"><a id="dclive" href="#">DC Live Chat</a><a id="online" href="#">Connecté</a></div>
            
              
              <div id="content">
                    <p>Now online: Leave a question or comment and our agents will try to attend to you </p>
              </div>
+             
+             
              <div id="message">
                    <textarea rows="3" cols="45"> ici un post</textarea>
-                   <button>Envoyer</button>
+                   <button id="dcBtn">Envoyer</button>
+                   
              </div>
+          
              
+        </div>
+           
              <script>
                    $(document).ready(function() {
                        
@@ -37,13 +43,20 @@
                               $("#online").hide();
                               $("#dclive").show();
                          });
-                       
+                         
+                         
+                         $("#dcBtn").click(function(){
+                             var message = $("textarea").val();
+                             
+                             var old = $("#content").html();
+                             
+                             $("#content").html(old + '<p>' + message + '</p>');
+                             
+                       });
                          
                    } );
                  
              </script>
-             
-        </div>
     </body>
 </html>
 
