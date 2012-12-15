@@ -25,30 +25,30 @@
   </div>
 
   <script>
-  $(document).ready(function() {
-    $("#dclive").click (function() {
-      $("#container").animate({bottom:0},200);
-      $("#dclive").hide();
-      $("#online").show();
+    $(document).ready(function() {
+      $("#dclive").click (function() {
+        $("#container").animate({bottom:0},200);
+        $("#dclive").hide();
+        $("#online").show();
+      });
+
+      $("#online").click (function() {
+        $("#container").animate({bottom:-451},200);
+        $("#online").hide();
+        $("#dclive").show();
+      });
+
+      $("#dcBtn").click(function(){
+       var message = $("textarea").val();
+
+       var old = $("#content").html();
+
+       $("#content").html(old + '<p>' + message + '</p>');
+
+      $("textarea").html("");
+        //
+      });
     });
-
-    $("#online").click (function() {
-      $("#container").animate({bottom:-451},200);
-      $("#online").hide();
-      $("#dclive").show();
-    });
-
-    $("#dcBtn").click(function(){
-     var message = $("textarea").val();
-
-     var old = $("#content").html();
-
-     $("#content").html(old + '<p>' + message + '</p>');
-
-    $("textarea").html("");
-                //
-    });
-  });
   </script>
 </body>
 </html>
