@@ -10,15 +10,39 @@
         <!-- Date: 2012-12-15 -->
     </head>
     <body>
-        <div id="container" style="bottom: 0px;">
-             <h1>DC Live Chat</h1>
+        <div id="container" style="bottom: -451px;">
+            <div id="title"><a id="dclive" href="#">DC Live Chat</a><a id="online" href="#">On Line</a></div>
+           
+             
              <div id="content">
-                   <p>ici nos message</p>
+                   <p>Now online: Leave a question or comment and our agents will try to attend to you </p>
              </div>
              <div id="message">
                    <textarea rows="3" cols="45"> ici un post</textarea>
                    <button>Envoyer</button>
              </div>
+             
+             <script>
+                   $(document).ready(function() {
+                       
+                      
+                         $("#dclive").click (function() {
+                              $("#container").animate({top:120},200);
+                              $("#dclive").hide();
+                              $("#online").show();
+                         });
+                         
+                         $("#online").click (function() {
+                              $("#container").animate({top:575},200);
+                              $("#online").hide();
+                              $("#dclive").show();
+                         });
+                       
+                         
+                   } );
+                 
+             </script>
+             
         </div>
     </body>
 </html>

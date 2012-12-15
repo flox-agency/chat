@@ -49,18 +49,17 @@ table {
 #container {
 	margin-top:100px;
 	overflow:scroll;
-	border:1px solid #A9F5A9;
+	border:1px solid #000000;
 	
 	margin-left: auto;
 	margin-right: auto;
 	width: 260px;
-	height: 500px;
+	height: 480px;
 	
 	  background: none;
     
-     border-radius: 0;
-     -webkit-border-radius: 0;
-     -moz-border-radius: 0;
+     border-radius: 6px;
+    
      bottom: -99999px;
     
     
@@ -74,11 +73,11 @@ table {
 
 #content{
 	
-	
+	margin-top:20px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 250px;
-	height: 350px;
+	height: 320px;
 	
 	border-radius : 3px;
 }
@@ -91,17 +90,31 @@ table {
 	background: #E6E6E6;
 	border: 1px solid #BDBDBD;
 	border-radius:4px;
+	font-size: 13px;
+ 
 }
 
 
-h1 {
-	color: #01DF3A;
+#title {
+	background: #000000;
+	height: 30px;
+}
+
+a {
+	color: #FFF;
    font-family: "Museo","Georgia","serif";
-   margin-top: 6px;
+   
    text-align: center;
    padding: .2em;
-   font-size: 12px;
+   font-size: 13px;
  
+ 
+}
+
+
+#online {
+	
+ display: none;
 }
 
 #message {
@@ -113,6 +126,7 @@ h1 {
 	
 	padding: 0 0 0 3px;
 	color: #000000;
+	
 }
 
 #message button {
@@ -121,7 +135,8 @@ h1 {
 
 #message textarea {
 	border: 1px solid #A9F5A9;
-	font-family: Tahoma,sans-serif;
+	font-family: "Tahoma","sans-serif";
+	border: 1px solid #BDBDBD;
 }
 
 button {
