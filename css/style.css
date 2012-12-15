@@ -1,5 +1,125 @@
-body {
-font: 13px/21px 'Lucida Sans', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
-color: #444;
+
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-  
+
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background:#F2F2F2;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#container {
+	margin-top:100px;
+	overflow:scroll;
+	border:1px solid #A9F5A9;
+	
+	margin-left: auto;
+	margin-right: auto;
+	width: 260px;
+	height: 500px;
+	
+	
+	
+}
+
+#content{
+	
+	
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+	height: 350px;
+	
+	border-radius : 3px;
+}
+
+
+#content p {
+	
+	padding: 1em;
+	margin: .2em;
+	background: #E6E6E6;
+	border: 1px solid #BDBDBD;
+	border-radius:4px;
+}
+
+
+h1 {
+	color: #01DF3A;
+   font-family: "Museo","Georgia","serif";
+   margin-top: 6px;
+   text-align: center;
+   padding: .2em;
+   font-size: 31px;
+ 
+}
+
+#message {
+	
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+	
+	padding: 0 0 0 3px;
+	color: #000000;
+}
+
+#message button {
+	margin: 1em 0 0 0;
+}
+
+#message textarea {
+	border: 1px solid #A9F5A9;
+	font-family: Tahoma,sans-serif;
+}
+
+button {
+	
+	border: none;
+	padding: 2px;
+	text-decoration: none;
+	background: #2EFE64;
+	color: white;
+	box-shadow: 0 1px 0 white;
+	border-radius: 4px;
+	
+}
