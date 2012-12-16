@@ -105,7 +105,6 @@
     $userAgent  = getenv('HTTP_USER_AGENT');
 	
 	
-	$browser = get_browser(null, true);
 
     // recuperer Ip:
     
@@ -116,9 +115,7 @@
 	echo "<br />";
 	echo $ipAddress;
 	
-	echo "<br />";
 	
-	print_r($browser);
 	
 	echo "<br />";
 	
