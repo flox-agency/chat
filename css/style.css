@@ -38,8 +38,8 @@ blockquote, q {
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+	contentMessages: '';
+	contentMessages: none;
 }
 table {
 	border-collapse: collapse;
@@ -74,7 +74,7 @@ table {
 
 
 
-#content{
+#contentMessages{
 	
 	margin-top:20px;
 	margin-left: auto;
@@ -86,7 +86,7 @@ table {
 }
 
 
-#content p {
+#contentMessages p {
 	
 	padding: 1em;
 	margin: .2em;
