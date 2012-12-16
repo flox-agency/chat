@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>DCLiveChat</title>
-  <meta name="author" content="Jeffart-Ced" />
-  <link rel="stylesheet" type="text/css" href="css/style.css"/>
-  <link href="http://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css" />
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <!-- Date: 2012-12-15 -->
-</head>
-<body>
-  <div id="container" style="bottom: -451px;">
-    <div id="title">
-      <a id="dclive" href="#">DC Live Chat</a>
-      <a id="online" href="#">Connecté</a>
-    <br clear="all">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DCLiveChat</title>
+    <meta name="author" content="Jeffart-Ced" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href="http://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="container" style="bottom: 0px;" onClick="$('textarea').focus();">
+      <div id="title">
+        <a id="dclive" href="#">DC Live Chat</a>
+        <a id="online" href="#">Connecté</a>
+        <div class="options">
+          <a>-</a>
+        </div>
+        <br clear="all">
+      </div>
+      <div id="content" style="display:none">
+        <p>Vous êtes connecté: posez une question, un agent rentrera en contact avec vous. </p>
+      </div>
+      <div id="message" style="display:none">
+        <textarea rows="3" cols="45"> </textarea>
+        <button id="dcBtn">Envoyer</button>
+      </div>
     </div>
-    <div id="content">
-      <p>Vous êtes connecté: posez une question, un agent rentrera en contact avec vous. </p>
-    </div>
-    <div id="message">
-      <textarea rows="3" cols="45"> ici un post</textarea>
-      <button id="dcBtn">Envoyer</button>
-    </div>
-  </div>
 
-  <script>
-    $(document).ready(function() {
-      $("#dclive").click (function() {
-        $("#container").animate({bottom:0},200);
-        $("#dclive").hide();
-        $("#online").show();
+    <script>
+      $(document).ready(function() {
+        $("#dclive").click (function() {
+          $('#content').toggle('fast');
+          $('#message').toggle('fast');
+          $("#dclive").hide();
+          $("#online").show();
+        });
+
+        $("#online").click (function() {
+          $('#content').toggle('fast');
+          $('#message').toggle('fast');
+          $("#online").hide();
+          $("#dclive").show();
+        });
+
+        $("#dcBtn").click(function(){
+          var message = $("textarea").val();
+          var old = $("#content").html();
+          $("#content").html(old + '<p>' + message + '</p>'); // ajout de message
+          $("#content").scrollTop($("#content")[0].scrollHeight); //Auto scroll down à chaque ajout de message.
+          $("textarea").val(''); //Nettoyage de la textarea
+        });
       });
-
-      $("#online").click (function() {
-        $("#container").animate({bottom:-451},200);
-        $("#online").hide();
-        $("#dclive").show();
-      });
-
-      $("#dcBtn").click(function(){
-       var message = $("textarea").val();
-
-       var old = $("#content").html();
-
-       $("#content").html(old + '<p>' + message + '</p>'); // ajout de message
-       $("#content").scrollTop($("#content")[0].scrollHeight); //Auto scroll down à chaque ajout de message.
-
-      $("textarea").val(''); //Nettoyage de la textarea
-        //
-      });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
 

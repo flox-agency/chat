@@ -47,27 +47,17 @@ table {
 }
 
 #container {
-	margin-top:100px;
 	border:1px solid #000000;
-	
 	margin-left: auto;
 	margin-right: auto;
 	width: 260px;
-	height: 480px;
-	
-	  background: none;
-    
-     border-radius: 6px;
-    
-     bottom: -99999px;
-    
-    
-     padding: 0;
-     position: fixed;
-     right: 30px;
-    
-     z-index: 9999;
-	
+	background: none;
+	border-radius: 6px 6px 0 0;
+	bottom: -99999px;
+	padding: 0;
+	position: fixed;
+	right: 30px;
+	z-index: 9999;
 }
 
 
@@ -138,7 +128,7 @@ a {
 }
 
 #message button {
-	margin: 1em 0 0 0;
+	margin: 1em 0;
 }
 
 #message textarea {
@@ -150,9 +140,8 @@ a {
 #dcBtn {
 	
 	border: none;
-	padding: 2px;
 	text-decoration: none;
-	background: #2EFE64;
+	background: #2E4FFE;
 	color: white;
 	box-shadow: 0 1px 0 white;
 	border-radius: 4px;
