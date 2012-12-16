@@ -136,14 +136,3 @@ a {
 	font-family: "Tahoma","sans-serif";
 	border: 1px solid #BDBDBD;
 }
-
-#dcBtn {
-	
-	border: none;
-	text-decoration: none;
-	background: #2E4FFE;
-	color: white;
-	box-shadow: 0 1px 0 white;
-	border-radius: 4px;
-	
-}

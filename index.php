@@ -22,8 +22,6 @@
       $('#contentMessages').hide();
       $('#message').hide();
 
-
-
       $("#dclive").click (function() {
         $('#contentMessages').toggle('fast');
         $('#message').toggle('fast');
@@ -176,12 +174,11 @@
     
     <div id="message">
     	<form id="userArea">
-       <textarea rows="3" cols="45" name="messages" onkeydown="javascript: return checkChatboxInputKey(event,this);"></textarea>
+        <textarea rows="3" cols="45" name="messages" onkeydown="javascript: return checkChatboxInputKey(event,this);"></textarea>
       </form> 
     </div>
   </div>
-
- 
+  
 </body>
 </html>
 
