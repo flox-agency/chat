@@ -171,15 +171,14 @@
     <div id="message">
     	<form id="userArea">
       
-<<<<<<< HEAD
+
       <textarea rows="3" cols="45" name="messages" onkeydown="javascript: return checkChatboxInputKey(event,this);"></textarea>
-=======
-<<<<<<< HEAD
+
       <textarea rows="3" cols="45" name="messages" onkeydown="javascript: return checkChatboxInputKey(event,this);"></textarea>
-=======
+
       <textarea rows="3" cols="45" name="messages"> Saisir votre requete !!!</textarea>
->>>>>>> ok
->>>>>>> ok
+
+
       <input type="submit" id="dcBtn" value="Envoyer" />
       </form> 
     </div>
