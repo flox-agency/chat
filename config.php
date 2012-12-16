@@ -8,8 +8,8 @@
 
         $config = array();
 		$config['host'] = 'localhost';
-		$config['user'] = 'chat';
-		$config['pass'] = 'chat';
+		$config['user'] = 'root';
+		$config['pass'] = '';
 		$config['table'] = 'dc_livechat';
 		
 		
