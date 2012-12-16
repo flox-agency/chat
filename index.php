@@ -18,6 +18,12 @@
 	
 	 <script>
     $(document).ready(function() {
+      //minimisation de la fenêtre de chat
+      $('#contentMessages').hide();
+      $('#message').hide();
+
+
+
       $("#dclive").click (function() {
         $('#contentMessages').toggle('fast');
         $('#message').toggle('fast');
@@ -171,7 +177,6 @@
     <div id="message">
     	<form id="userArea">
        <textarea rows="3" cols="45" name="messages" onkeydown="javascript: return checkChatboxInputKey(event,this);"></textarea>
-        <input type="submit" id="dcBtn" value="Envoyer" />
       </form> 
     </div>
   </div>
