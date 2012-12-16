@@ -112,7 +112,7 @@
     });
 
     function checkChatboxInputKey (event,chatboxtextarea) {
-      //Si la touche appuyée est "Entrée"
+      //Si la touche appuyée est "Entrée" 
       if(event.keyCode == 13 && event.shiftKey == 0) {
          $("#userArea").submit();
          return false;
