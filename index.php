@@ -94,7 +94,7 @@
     
     <div id="message">
     	<form id="userArea">
-        <textarea rows="3" cols="45" name="messages" onkeydown="javascript: return checkChatboxInputKey(event,this);"></textarea>
+        <textarea rows="3" cols="45" name="message" id="chat_input" onkeydown="javascript: return checkChatboxInputKey(event,this);"></textarea>
       </form> 
     </div>
   </div>
