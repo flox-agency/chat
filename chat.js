@@ -95,6 +95,10 @@ function refreshList () {
     dataType:"html",
     data: data, 
     success : function (data) {
+      if( (data!=$('#contentMessages').html()) && ($("#message").is(":hidden"))) {
+        $('#message').toggle('fast');
+        $('#contentMessages').toggle('fast');
+      }
       $("#contentMessages").html(data);
       $("#contentMessages").scrollTop($("#contentMessages")[0].scrollHeight);
       refreshList();
