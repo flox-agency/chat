@@ -54,9 +54,11 @@ function refreshList (tracker) {
     dataType:"html",
     data: data, 
     success : function (data) {
-      if( (data!=$('#contentMessages').html()) && ($("#message").is(":hidden"))) {
-        //$('#message').toggle('fast');
-        //$('#contentMessages').toggle('fast');
+      if( (data!=$('#contentMessages').html()) && ($("#container",window.parent.document).hasClass('hide'))) {
+        $("#container",window.parent.document).css({ bottom :'0px'});
+        $("#container",window.parent.document).removeClass('hide');
+        $("#dclive").hide();
+        $("#online").show();
       }
       $("#contentMessages").html(data);
       $("#contentMessages").scrollTop($("#contentMessages")[0].scrollHeight);
@@ -70,20 +72,22 @@ function initChat(tracker) {
   
   //minimisation de la fenêtre de chat
   //$('#contentMessages').hide();
-  //$('#message').hide();
+  $("#container",window.parent.document).css({bottom :'-350px'});
+  $("#container",window.parent.document).addClass('hide');
+  $("#online").hide();
+  $("#dclive").show();
 
   $("#dclive").click (function() {
-    $('#chatcontent').toggle('fast');
-    //$('#message').toggle('fast');
+    $("#container",window.parent.document).css({ bottom :'0px'});
+    $("#container",window.parent.document).removeClass('hide');
     $("#contentMessages").scrollTop($("#contentMessages")[0].scrollHeight);
     $("#dclive").hide();
     $("#online").show();
-    $('#container').css('height','30px');
   });
 
   $("#online").click (function() {
-    $('#chatcontent').toggle('fast');
-    //$('#message').toggle('fast');
+    $("#container",window.parent.document).css({bottom :'-350px'});
+    $("#container",window.parent.document).addClass('hide');
     $("#online").hide();
     $("#dclive").show();
   });
