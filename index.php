@@ -78,25 +78,7 @@
 	
 	
   <div id="container" style="bottom: 0px;" onClick="$('textarea').focus();">
-    <div id="title">
-      <a id="dclive" href="#">DC Live Chat</a>
-      <a id="online" href="#">Connecté</a>
-    </div>
-    
-    <!-- Display -->
-    
-    <div id="contentMessages">
-      
-    </div>
-    
-    
-    <!-- Post -->
-    
-    <div id="message">
-    	<form id="userArea">
-        <textarea rows="3" cols="45" name="message" id="chat_input" onkeydown="javascript: return checkChatboxInputKey(event,this);"></textarea>
-      </form> 
-    </div>
+    <iframe src="chatgadget.php"></iframe>
   </div>
 </body>
 </html>

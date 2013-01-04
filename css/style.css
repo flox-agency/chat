@@ -58,6 +58,20 @@ table {
 	position: fixed;
 	right: 30px;
 	z-index: 9999;
+	height: 375px;
+}
+
+#container iframe {
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+	border: 0px;
+	overflow-y: hidden;
+	z-index: 100;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
 }
 
 
@@ -65,14 +79,21 @@ table {
 
 
 #contentMessages{
-	
-	margin-top:20px;
+	/*margin-top:20px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 250px;
+	width: 100%;
 	height: 320px;
 	overflow:auto;
-	border-radius : 3px;
+	border-radius : 3px;*/
+
+	font-family: "Arial","Helvetica",sans-serif;
+	color: #222;
+	font-size: 13px;
+	overflow-x: hidden;
+	padding: 6px 6px 0;
+	line-height: 15px;
+	height: 270px;
 }
 
 
@@ -83,8 +104,7 @@ table {
 	background: #E6E6E6;
 	border: 1px solid #BDBDBD;
 	border-radius:4px;
-	font-size: 13px;
- 
+	font-size: 13px; 
 }
 
 
@@ -105,13 +125,10 @@ a {
    text-align: center;
    padding: .2em;
    font-size: 13px;
- 
- 
 }
 
 
 #online {
-	
  display: none;
 }
 
@@ -123,8 +140,7 @@ a {
 	width: 250px;
 	
 	padding: 0 0 0 3px;
-	color: #000000;
-	
+	color: #000000;	
 }
 
 #message button {
@@ -135,4 +151,17 @@ a {
 	border: 1px solid #A9F5A9;
 	font-family: "Tahoma","sans-serif";
 	border: 1px solid #BDBDBD;
+}
+
+.wackfooter {
+position: absolute;
+left: 0;
+bottom: 0;
+height: 70px;
+width: 100%;
+background-color: whiteSmoke;
+}
+
+.chatcontent {
+	overflow: hidden;
 }

@@ -55,8 +55,8 @@ function refreshList (tracker) {
     data: data, 
     success : function (data) {
       if( (data!=$('#contentMessages').html()) && ($("#message").is(":hidden"))) {
-        $('#message').toggle('fast');
-        $('#contentMessages').toggle('fast');
+        //$('#message').toggle('fast');
+        //$('#contentMessages').toggle('fast');
       }
       $("#contentMessages").html(data);
       $("#contentMessages").scrollTop($("#contentMessages")[0].scrollHeight);
@@ -69,20 +69,21 @@ function refreshList (tracker) {
 function initChat(tracker) {
   
   //minimisation de la fenêtre de chat
-  $('#contentMessages').hide();
-  $('#message').hide();
+  //$('#contentMessages').hide();
+  //$('#message').hide();
 
   $("#dclive").click (function() {
-    $('#contentMessages').toggle('fast');
-    $('#message').toggle('fast');
+    $('#chatcontent').toggle('fast');
+    //$('#message').toggle('fast');
     $("#contentMessages").scrollTop($("#contentMessages")[0].scrollHeight);
     $("#dclive").hide();
     $("#online").show();
+    $('#container').css('height','30px');
   });
 
   $("#online").click (function() {
-    $('#contentMessages').toggle('fast');
-    $('#message').toggle('fast');
+    $('#chatcontent').toggle('fast');
+    //$('#message').toggle('fast');
     $("#online").hide();
     $("#dclive").show();
   });
