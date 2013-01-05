@@ -54,8 +54,9 @@ function refreshList (tracker) {
     dataType:"html",
     data: data, 
     success : function (data) {
-      if( (data!=$('#contentMessages').html()) && ($("#container",window.parent.document).hasClass('hide'))) {
-        $("#container",window.parent.document).css({ bottom :'0px'});
+      if( (data!=$('#contentMessages').html()) ) {
+        update_parent2();     
+       // $("#container",window.parent.document).css({ bottom :'0px'});
         $("#container",window.parent.document).removeClass('hide');
         $("#dclive").hide();
         $("#online").show();
@@ -68,26 +69,38 @@ function refreshList (tracker) {
   return false;
 }
 
+ $(window).load(function () {
+         update_parent();
+       });
+
 function initChat(tracker) {
+    
+    
+         //update_parent();
+      
   
   //minimisation de la fenêtre de chat
   //$('#contentMessages').hide();
-  $("#container",window.parent.document).css({bottom :'-350px'});
-  $("#container",window.parent.document).addClass('hide');
+ // $(document.getElementsByTagName("iframe")[0].contentWindow).css({bottom :'-350px'});
+ // $(document.getElementsByTagName("iframe")[0].contentWindow).addClass('hide');
   $("#online").hide();
   $("#dclive").show();
 
   $("#dclive").click (function() {
-    $("#container",window.parent.document).css({ bottom :'0px'});
-    $("#container",window.parent.document).removeClass('hide');
+      update_parent2();
+    //$(document.getElementById("container").contentWindow).css({ bottom :'0px'});
+    //$(document.getElementById("container").contentWindow).removeClass('hide');
     $("#contentMessages").scrollTop($("#contentMessages")[0].scrollHeight);
     $("#dclive").hide();
     $("#online").show();
   });
 
   $("#online").click (function() {
-    $("#container",window.parent.document).css({bottom :'-350px'});
-    $("#container",window.parent.document).addClass('hide');
+      
+      
+      update_parent();
+   // $(document.getElementById("container").contentWindow).css({bottom :'-350px'});
+   // $(document.getElementById("container").contentWindow).addClass('hide');
     $("#online").hide();
     $("#dclive").show();
   });

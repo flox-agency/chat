@@ -22,12 +22,20 @@
       <div id="contentMessages">
         
       </div>
-      
+       <script>
+    
+    function update_parent() {
+        parent.postMessage('-350', '*');
+    }
+     function update_parent2() {
+        parent.postMessage('0', '*');
+    }
+    </script>
       
       <!-- Post -->
       <div class="">
         <div id="message">
-        	<form id="userArea">
+          <form id="userArea">
             <textarea rows="3" cols="45" name="message" id="chat_input" onkeydown="javascript: return checkChatboxInputKey(event,this);"></textarea>
           </form> 
         </div>
